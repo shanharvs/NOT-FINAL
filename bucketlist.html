@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>DREAM PLACES</title>
+    <link rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,150;1,150&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background: url("backgrounds/background5.png") no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            background-color: #cae4ce;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            font-family: "Roboto", sans-serif;
+            align-items: center;
+            background-color: #8fc0a9;
+            padding: 12px 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            gap: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin: 0 10px;
+            padding: 10px 15px;
+            font-weight: bold;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+
+        nav a i {
+            margin-right: 5px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a:hover i {
+            color: #cae4ce;
+        }
+
+        nav a:active, nav a:active i {
+        color: #276967;
+        }
+
+        .biography-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+            position: relative;
+        }
+
+        .biography-section ul {
+            font-family: "Roboto", sans-serif;;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 70px;
+        }
+
+        h1 {
+            font-family: Georgia;
+            font-size: 89px;
+            color: #8FC0A9;
+            text-shadow: 2px 1px 6px black;
+            margin-bottom: 20px;
+            letter-spacing: 8px;
+            position: relative;
+            z-index: 2;
+        }
+
+        h2 {
+        font-family: Georgia;
+        display: inline;
+        font-size: 35px;
+        color: #cae4ce;
+        margin: 20px;
+        text-shadow: 2px 1px 10px black;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-decoration-color: #33443C;
+        text-underline-offset: 12px;
+        }
+
+        p {
+            font-family: Verdana;
+        }
+
+        ol {
+            text-align: justify;
+            font-size: Verdana;
+            font-size: 20px;
+            line-height: 1.5;
+            display:inline-flexbox;
+        }
+
+        .background-text {
+            position: absolute;
+            font-family: Georgia;
+            font-size: 150px;
+            font-weight: bold;
+            color: #276967;
+            opacity: 20%;
+            white-space: nowrap;
+            letter-spacing: 1px;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        .nav-box {
+            display: inline-block;
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin: 10px 30px 20px 0;
+            background-color: #8FC0A9;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .nav-box:hover {
+            background-color: #c8d5b9;
+        }
+
+        .nav-box:active {
+            background-color: #92ab82;
+        }
+
+        .boxtype {
+            width: 60%;
+            margin: 20px auto;
+            padding: 15px;
+            background-color: #8fc0a9;
+            box-shadow: 0 0 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .button-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            width: 90%;
+            margin: 20px auto;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .button-container a {
+            background-color: #cae4ce;
+            font-family: "Roboto", sans-serif;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html"><i class="fa-solid fa-house fa-sm"></i>HOME</a></li>
+            <li><a href="biomain.html"><i class="fa-solid fa-child-dress fa-sm"></i>BIOGRAPHY</a></li>
+            <li><a href="skillsmain.html"><i class="fa-solid fa-heart fa-sm"></i>SKILLS</a></li>
+            <li><a href="resume.html"><i class="fa-solid fa-file fa-sm"></i>RESUME</a></li>
+            <li><a href="gallery.html"><i class="fa-solid fa-image fa-sm"></i> PHOTO GALLERY</a></li>
+            <li><a href="favorites.html"><i class="fa-solid fa-star fa-sm"></i>MEDIA</a></li>
+            <li><a href="goals.html"><i class="fa-solid fa-location-dot fa-sm"></i>GOALS</a></li>
+
+        </ul>
+    </nav>
+
+
+    <div class="biography-section">
+        <div class="background-text">BUCKET LIST</div>
+        <h1>BUCKET LIST</h1>
+        <ul>
+            <li><a href="dreamplaces.html" class="nav-box">DREAM PLACE</a></li>
+            <li><a href="bucketlist.html" class="nav-box">BUCKET LIST</a></li>
+        </ul>
+    </div>
+
+    <div class="boxtype">
+        <h2>30s to 30s</h2>
+        <ol>
+            <li>I want to visit Paris, especially the Louvre, to see the art, the architecture, and everything it offers. I've always admired the masterpieces displayed there and the rich history that surrounds the museum.</li>
+            <li>Meeting one of my favorite international authors and receiving a signed book with a personal dedication is a dream of mine. I've always admired their work and felt a deep connection to their writing.</li>
+            <li>I hope to move to a country that genuinely makes me happy, where I can create a fresh start. Living in a place that aligns with my values and lifestyle would be incredibly fulfilling.</li>
+            <li>I plan to adopt not just one but two cats and provide them with a loving, secure home. I've always loved animals, and having my own cats to care for would be incredibly rewarding. </li>
+            <li>Although I don't believe in love easily, I still wish to meet someone who will genuinely understand, support me, and love me thoroughly. </li>
+            <li>I want to give everything I can to my family, especially supporting my sisters and my aging parents financially. </li>
+            <li>Traveling around the world excites me because I am curious about different cultures and experiences.</li>
+            <li>I strive to become the best tita in my family, even if I might not surpass one of my sisters for that title.</li>
+            <li>I want to help people outside my family and make a meaningful difference in their lives. Whether it's through volunteering, offering support to those in need, or simply spreading kindness, I want to leave a positive impact. </li>
+            <li>I aim to get rich and achieve financial stability not just for myself but to help those I care about.</li>
+    </ol>
+    </div>
+
+    <div class="button-container">
+        <a href="goals.html" class="nav-box">Go Top</a>
+    </div>
+
+
+
+</body>
+</html>

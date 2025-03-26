@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>GALLERY</title>
+    <link rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,150;1,150&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background: url("../FINAL/backgrounds/background4.png") no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            font-family: "Roboto", sans-serif;
+            background-color: #cae4ce;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #8fc0a9;
+            padding: 12px 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            gap: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin: 0 10px;
+            padding: 10px 15px;
+            font-weight: bold;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+
+        nav a i {
+            margin-right: 5px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a:hover i {
+            color: #cae4ce;
+        }
+
+        nav a:active, nav a:active i {
+        color: #276967;
+    	}
+
+        .favorites-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+            position: relative;
+        }
+
+        .favorites-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 70px;
+        }
+
+        h1 {
+            font-family: Georgia;
+            font-size: 89px;
+            color: #8FC0A9;
+            text-shadow: 2px 1px 6px black;
+            margin-bottom: 20px;
+            letter-spacing: 8px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .background-text {
+            position: absolute;
+            font-family: Georgia;
+            font-size: 150px;
+            font-weight: bold;
+            color: #276967;
+            opacity: 20%;
+            white-space: nowrap;
+            letter-spacing: 1px;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+            .image_container {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr); 
+                gap: 40px;
+                max-width: 10%;
+                margin: 0 auto;
+                padding: 20px;
+                justify-content: center;
+            }
+
+            
+            .image-container {
+                width: 250px; 
+                height: 250px;
+                margin-top: 60px;
+                overflow: hidden;
+                position: relative;
+                border-radius: 10px;
+
+            }
+
+            .image-container img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+        
+            .image-container::before {
+                content: attr(data-title);
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.7);
+                color: white;
+                text-align: center;
+                padding: 5px;
+                font-size: 14px;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+    
+            .image-container:hover {
+                transform: scale(1.1);
+            }
+
+            .image-container:hover::before {
+                opacity: 1;
+            }
+
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html"><i class="fa-solid fa-house fa-sm"></i>HOME</a></li>
+            <li><a href="biomain.html"><i class="fa-solid fa-child-dress fa-sm"></i>BIOGRAPHY</a></li>
+            <li><a href="skillsmain.html"><i class="fa-solid fa-heart fa-sm"></i>SKILLS</a></li>
+            <li><a href="resume.html"><i class="fa-solid fa-file fa-sm"></i>RESUME</a></li>
+            <li><a href="gallery.html"><i class="fa-solid fa-image fa-sm"></i> PHOTO GALLERY</a></li>
+            <li><a href="favorites.html"><i class="fa-solid fa-star fa-sm"></i>MEDIA</a></li>
+            <li><a href="goals.html"><i class="fa-solid fa-location-dot fa-sm"></i>GOALS</a></li>
+
+        </ul>
+    </nav>
+
+    
+    <div class="favorites-section">
+        <div class="background-text">PHOTO GALLERY</div>
+        <h1>PHOTO GALLERY</h1>
+    </div>
+
+</div>
+
+
+<div class="image_container">
+    <div class="image-container" data-title="Library Feels">
+        <a href="gallery/gallery1.jpg" target="winImage"><img src="gallery/gallery1.jpg" alt="Kiddie"></a>
+    </div>
+    <div class="image-container" data-title="Feeling Goofy">
+        <a href="gallery/gallery2.jpg" target="winImage"><img src="gallery/gallery2.jpg" alt="Kiddie2"></a>
+    </div>
+    <div class="image-container" data-title="Why, though?">
+        <a href="gallery/gallery3.jpg" target="winImage"><img src="gallery/gallery3.jpg" alt="Kiddie3"></a>
+    </div>
+    <div class="image-container" data-title="Still Feeling Goofy">
+        <a href="gallery/gallery4.jpg" target="winImage"><img src="gallery/gallery4.jpg" alt="Kiddie4"></a>
+    </div>
+    <div class="image-container" data-title="Feeling like a Pookie">
+        <a href="gallery/gallery5.jpg" target="winImage"><img src="gallery/gallery5.jpg" alt="Kiddie5"></a>
+    </div>
+    <div class="image-container" data-title="School Days">
+        <a href="gallery/gallery6.jpg" target="winImage"><img src="gallery/gallery6.jpg" alt="Kiddie6"></a>
+    </div>
+    <div class="image-container" data-title="Kyotie">
+        <a href="gallery/gallery7.jpg" target="winImage"><img src="gallery/gallery7.jpg" alt="Kiddie7"></a>
+    </div>
+    <div class="image-container" data-title="Seriouz">
+        <a href="gallery/gallery8.jpg" target="winImage"><img src="gallery/gallery8.jpg" alt="Kiddie8"></a>
+    </div>
+    <div class="image-container" data-title="Well...">
+        <a href="gallery/gallery9.jpg" target="winImage"><img src="gallery/gallery9.jpg" alt="Kiddie9"></a>
+    </div>
+    <div class="image-container" data-title="Hehe">
+        <a href="gallery/gallery10.jpg" target="winImage"><img src="gallery/gallery10.jpg" alt="Kiddie10"></a>
+    </div>
+    <div class="image-container" data-title="Nerdz">
+        <a href="gallery/gallery11.jpg" target="winImage"><img src="gallery/gallery11.jpg" alt="Kiddie11"></a>
+    </div>
+    <div class="image-container" data-title="Oh, well...">
+        <a href="../FINAL/gallery/gallery12.jpg" target="winImage"><img src="gallery/gallery12.jpg" alt="Kiddie12"></a>
+    </div>
+    <div class="image-container" data-title="It was time for SB">
+        <a href="gallery/gallery13.jpg" target="winImage"><img src="gallery/gallery13.jpg" alt="Kiddie13"></a>
+    </div>
+    <div class="image-container" data-title="Broke my fast that day">
+        <a href="gallery/gallery14.jpg" target="winImage"><img src="gallery/gallery14.jpg" alt="Kiddie14"></a>
+    </div>
+    <div class="image-container" data-title="Bartender was very Gwapo">
+        <a href="gallery/gallery15.jpg" target="winImage"><img src="gallery/gallery15.jpg" alt="Kiddie15"></a>
+    </div>
+    <div class="image-container" data-title="Okay, then">
+        <a href="gallery/gallery16.jpg" target="winImage"><img src="gallery/gallery16.jpg" alt="Kiddie16"></a>
+    </div>
+    <div class="image-container" data-title="Meow">
+        <a href="gallery/gallery17.jpg" target="winImage"><img src="gallery/gallery17.jpg" alt="Kiddie17"></a>
+    </div>
+    <div class="image-container" data-title="Cheers!">
+        <a href="gallery/gallery18.jpg" target="winImage"><img src="gallery/gallery18.jpg" alt="Kiddie18"></a>
+    </div>
+    <div class="image-container" data-title="Sweet Momentz">
+        <a href="gallery/gallery19.jpg" target="winImage"><img src="gallery/gallery19.jpg" alt="Kiddie19"></a>
+    </div>
+    <div class="image-container" data-title="Mirror Selfie">
+        <a href="gallery/gallery20.jpg" target="winImage"><img src="gallery/gallery20.jpg" alt="Kiddie20"></a>
+    </div>
+</div>
+
+
+</body>
+</html>

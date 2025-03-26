@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>RESUME</title>
+    <link rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,150;1,150&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <style>
+        body {
+            background: url("backgrounds/background2.png") no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            font-family: "Roboto", sans-serif;
+            background-color: #cae4ce;
+            text-align: center;
+        }
+
+        nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #8fc0a9;
+    padding: 12px 20px;
+    margin: 0;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    gap: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav a {
+    margin: 0 5px;
+    padding: 20px 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+nav a i {
+    margin-right: 5px;
+}
+
+nav a:hover,
+nav a:hover i {
+    color: #cae4ce;
+}
+
+nav a:active,
+nav a:active i {
+    color: #276967;
+}
+
+
+        .favorites-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+            position: relative;
+        }
+
+        .favorites-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 70px;
+        }
+
+        h1 {
+            font-family: Georgia;
+            font-size: 89px;
+            color: #8FC0A9;
+            text-shadow: 2px 1px 6px black;
+            margin-bottom: 20px;
+            letter-spacing: 8px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .boxtype {
+            width: 50%;
+            margin: 20px auto;
+            padding: 15px;
+            background-color: #8fc0a9;
+            box-shadow: 0 0 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            text-align: left;
+        }
+        .image_container {
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            border-radius: 0%;
+            flex-shrink: 0;
+        }
+        .image_container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            text-align: right;
+            width: 60%;
+        }
+        h2, h4 {
+            margin: 5px 0;
+            font-family: 'Times New Roman';
+        }
+        .section {
+            width: 50%;
+            margin: 20px auto;
+            padding: 15px;
+            background-color: #8FC0A9;
+            box-shadow: 0 0 10px;
+            border-radius: 5px;
+            text-align: left;
+        }
+        h3 {
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        p, ul, li {
+            font-family: Geneva;
+            font-size: 17px;
+        }
+
+        .nav-box {
+            display: inline-block;
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin: 10px 30px 20px 0;
+            background-color: #8FC0A9;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .nav-box:hover {
+            background-color: #c8d5b9;
+        }
+
+        .nav-box:active {
+            background-color: #92ab82;
+        }
+
+        .background-text {
+            position: absolute;
+            font-family: Georgia;
+            font-size: 150px;
+            font-weight: bold;
+            color: #276967;
+            opacity: 20%;
+            white-space: nowrap;
+            letter-spacing: 1px;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        .button-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            width: 90%;
+            margin: 20px auto;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .button-container a {
+            background-color: #cae4ce;
+        }
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html"><i class="fa-solid fa-house fa-sm"></i>HOME</a></li>
+        <a href="biomain.html"><i class="fa-solid fa-child-dress fa-sm"></i>BIOGRAPHY</a></li>
+        <a href="skillsmain.html"><i class="fa-solid fa-heart fa-sm"></i>SKILLS</a></li>
+        <a href="resume.html"><i class="fa-solid fa-file fa-sm"></i>RESUME</a></li>
+        <a href="gallery.html"><i class="fa-solid fa-image fa-sm"></i> PHOTO GALLERY</a></li>
+        <a href="favorites.html"><i class="fa-solid fa-star fa-sm"></i>MEDIA</a></li>
+        <a href="goals.html"><i class="fa-solid fa-location-dot fa-sm"></i>GOALS</a></li>
+
+    </nav>
+
+
+    <div class="favorites-section">
+        <div class="background-text">RESUME</div>
+        <h1>RESUME</h1>
+    </div>
+
+    <div class="boxtype">
+        <div class="image_container">
+            <img src="resume1.jpg" alt="Profile Picture">
+        </div>
+        <div class="info">
+            <h2>Shanizza Harvey </h2>
+            <h4>71 Baco St. Brgy. Santa Teresita, Quezon City, Metro Manila<br>0993-960-7466<br>shanizzaharvey1230@gmail.com</h4>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Career Objective</h3>
+        <ul>
+            <p> I am seeking a competitive and challenging environment where I can serve your organization and establish a career for myself. 
+                I aim to obtain a position that challenges me and provides me with the opportunity to reach my full potential professionally and personally.</p>
+        </ul>
+    </div>
+
+
+    <div class="section">
+    <h3>Education</h3>
+        <p><b>University of The East, Manila</b><br> S.Y. 2023-Present</p>
+        <ul>
+            <li>Student in Information Technology</li>
+        </ul>
+        
+        <p><b>The Nazarene Catholic School, Quiapo Manila</b><br> S.Y. 2021-2023</p>
+        <ul>
+            <li>Graduated with Honors in Science, Technology, Engineering, and Mathematics</li>
+        </ul>
+        </div>
+
+    <div class="section">
+        <h3>Skills</h3>
+        <ul>
+            <li>Proficient in HTML, CSS, and basic JavaScript</li>
+            <li>Experienced with MySQL and database management</li>
+            <li>Basic knowledge of C# and Java programming</li>
+            <li>Effective communication and teamwork abilities</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h3>Personal Information</h3>
+        <ul>
+        <li>Age: 21</li>
+        <li>Sex: Female</li>
+        <li>Birthday: November 30, 2003</li>
+        <li>Birthplace: Quezon City</li>
+        <li>Civil Status: Single</li>
+        <li>Religion: Islam</li>
+        <li>Height: 157 cm</li>
+        <li>Weight: 42 kg</li>
+    </ul>
+</div>
+</div>
+</body>
+</html>

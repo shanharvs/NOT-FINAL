@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>MY FILM MOVIES</title>
+    <link rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,150;1,150&display=swap" rel="stylesheet">
+
+    <style>
+
+        body {
+            background: url("backgrounds/background1.png") no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            font-family: "Roboto", sans-serif;
+            background-color: #cae4ce;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #8fc0a9;
+            padding: 12px 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            gap: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin: 0 10px;
+            padding: 10px 15px;
+            font-weight: bold;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+
+        nav a i {
+            margin-right: 5px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a:hover i {
+            color: #cae4ce;
+        }
+
+        nav a:active, nav a:active i {
+        color: #276967;
+    	}
+
+        .mybeat-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+            position: relative;
+        }
+
+        .mybeat-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 70px;
+        }
+
+        h1 {
+            font-family: Georgia;
+            font-size: 89px;
+            color: #8FC0A9;
+            text-shadow: 2px 1px 6px black;
+            margin-bottom: 20px;
+            letter-spacing: 8px;
+            position: relative;
+            z-index: 2;
+        }
+
+        h2 {
+            font-family: Georgia;
+            font-size: 35px;
+            color:  #cae4ce;
+            margin: 15px 0;
+            text-shadow: 2px 1px 10px black;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-decoration-color: #33443C;
+            text-underline-offset: 12px;
+        }
+
+        h3 {
+            font-family: Georgia;
+            font-size: 35px;
+            color: #cae4ce;
+            background-color: #8fc0a9;
+            padding: 12px 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            text-shadow: 2px 1px 10px black;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-decoration-color: #33443C;
+            text-underline-offset: 12px;
+            margin-bottom: 15px;
+        }
+
+
+        .background-text {
+            position: absolute;
+            font-family: Georgia;
+            font-size: 150px;
+            font-weight: bold;
+            color: #276967;
+            opacity: 20%;
+            white-space: nowrap;
+            letter-spacing: 1px;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        .nav-box {
+            display: inline-block;
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin: 10px 30px 20px 0;
+            background-color: #8FC0A9;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .nav-box:hover {
+            background-color: #c8d5b9;
+        }
+
+        .nav-box:active {
+            background-color: #92ab82;
+        }
+
+        .media-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .media-container img {
+            width: 350px;
+            height: 450px;
+            object-fit: cover;
+            margin-left: 50px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .media-container:hover {
+            transform: scale(1.2);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .movie-box {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            background-color: #8FC0A9;
+            padding: 15px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            max-width: 1200px;
+            gap: 20px;
+        }
+
+        .movie-description {
+            text-align: left;
+            color: #000000;
+            font-weight: bold;
+            margin-left: 20px;
+            line-height: 1.6;
+            max-width: 900px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px; 
+        }
+
+        .movie-description p {
+            font-family: Verdana;
+            font-weight: 1;
+            margin: 1px;
+        }
+
+
+        .video-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            margin-top: 120px;
+            margin-bottom: 20px;
+        }
+
+        video {
+            width: 1200px;        
+            height: 500px;     
+            border-radius: 10px;
+            object-fit: cover;  
+        }
+
+        .button-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            width: 90%;
+            margin: 20px auto;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .button-container a {
+            background-color: #cae4ce;
+            font-size: 16px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html"><i class="fa-solid fa-house fa-sm"></i>HOME</a></li>
+            <li><a href="biomain.html"><i class="fa-solid fa-child-dress fa-sm"></i>BIOGRAPHY</a></li>
+            <li><a href="skillsmain.html"><i class="fa-solid fa-heart fa-sm"></i>SKILLS</a></li>
+            <li><a href="resume.html"><i class="fa-solid fa-file fa-sm"></i>RESUME</a></li>
+            <li><a href="gallery.html"><i class="fa-solid fa-image fa-sm"></i> PHOTO GALLERY</a></li>
+            <li><a href="favorites.html"><i class="fa-solid fa-star fa-sm"></i>MEDIA</a></li>
+            <li><a href="goals.html"><i class="fa-solid fa-location-dot fa-sm"></i>GOALS</a></li>
+
+        </ul>
+    </nav>
+
+
+    <div class="mybeat-section">
+        <div class="background-text">MEDIA</div>
+        <h1>MEDIA</h1>
+        <ul>
+            <li><a href="mybeat.html" class="nav-box">MY BEAT</a></li>
+            <li><a href="myfilmovies.html" class="nav-box">MY FILM MOVIES</a></li>
+            <li><a href="mytvshows.html" class="nav-box">MY TV SHOWS</a></li>
+        </ul>
+    </div>
+
+    <div class="movie-box">
+    <div class="media-container">
+        <img src="moviesfilmsmusic/film1.jpg" alt="Castle - Halsey">
+    </div>
+    <div class="movie-description">
+        <h2>Fleabag</h2>
+        <p>Created by and starring Phoebe Waller-Bridge, Fleabag is a dark comedy that follows the chaotic, raw, and often self-sabotaging life of its titular character as she navigates grief, dysfunctional relationships, and her own fractured sense of identity.
+            What captivates me about Fleabag is its unapologetic honesty—how it breaks the fourth wall to create an intimate, conspiratorial connection with the audience. 
+            Waller-Bridge’s ability to blend humor with profound emotional weight is masterful, making each episode a rollercoaster of laughter and introspection. 
+            The show’s exploration of loss, guilt, and the complexities of female desire feels refreshingly unfiltered, striking a balance between vulnerability and resilience. 
+            The second season, in particular, delves into the messy, sacred, and forbidden spaces of love, making it an unforgettable exploration of flawed humanity.<br><br>
+        <b>Genre:</b> Romance, Comedy, Drama <br>
+        <b>Starring:</b> Phoebe Waller-Bridge, Sian Clifford, Andrew Scott</p>
+    </div>
+</div>
+
+<div class="movie-box">
+    <div class="media-container">
+        <img src="moviesfilmsmusic/film2.jpg" alt="Ready For It - Taylor Swift">
+    </div>
+
+    <div class="movie-description">
+        <h2>The Great</h2>
+        <p>Created by Tony McNamara, The Great is a satirical, anachronistic retelling of Catherine the Great’s rise to power in 18th-century Russia.
+            The series revels in its playful absurdity, blending historical events with sharp, irreverent humor.
+            What I love most about The Great is its unapologetic approach to reimagining history—not as a dry recounting of facts, but as a playground for exploring ambition, betrayal, and power dynamics. 
+            Elle Fanning and Nicholas Hoult have electric chemistry, portraying Catherine and Peter as both adversaries and twisted partners. 
+            The show’s witty, modern dialogue and lavish production design create a stark yet captivating contrast between brutality and elegance, keeping the stakes high while ensuring a sharp, sardonic edge. 
+            It's a delightful exploration of how history's most powerful figures are often as flawed and conflicted as anyone else.<br><br>
+            <b>Genre:</b> Historical Comedy, Drama, Satire <br>
+            <b>Starring:</b> Elle Fanning, Nicholas Hoult, Phoebe Fox</p>
+    </div>
+</div>
+
+<div class="movie-box">
+    <div class="media-container">
+        <img src="moviesfilmsmusic/film3.jpg" alt="Paper Bag - Fiona Apple">
+    </div>
+    <div class="movie-description">
+        <h2>House of the Dragon</h2>
+        <p>Created by Ryan Condal and George R.R. Martin, House of the Dragon is a gripping prequel to Game of Thrones, focusing on the tumultuous reign of House Targaryen and the bloody civil war known as the Dance of the Dragons.
+            What draws me to this series is its exploration of power, legacy, and the price of ambition. Unlike many fantasy series, House of the Dragon delves deeply into the psychological turmoil of its characters, making their choices feel personal and tragic.
+            The complex, multi-generational conflicts highlight how power can corrupt, and loyalty can be as fragile as trust. Visually stunning and narratively intense, the series blends epic scale with intimate betrayals, making it a haunting exploration of destiny and downfall.
+            It’s a testament to how the desire for power can fracture even the most formidable of families.<br><br>
+            <b>Genre:</b> Fantasy, Drama, Action<br>
+            <b>Starring:</b> Emma D'Arcy, Matt Smith, Olivia Cooke</p>
+    </div>
+</div>
+
+<div class="movie-box">
+    <div class="media-container">
+        <img src="moviesfilmsmusic/film4.jpg" alt="Ultraviolence - Lana Del Rey">
+    </div>
+    <div class="movie-description">
+        <h2>Succession</h2>
+        <p>Created by Jesse Armstrong, Succession is a biting satire of wealth, privilege, and the complexities of familial loyalty.
+            The show revolves around the Roy family, media moguls whose personal conflicts mirror the ruthless corporate power struggles within their empire.
+            What fascinates me about Succession is its portrayal of power as both a burden and a weapon—a toxic inheritance passed down through generations.
+            Each character is masterfully crafted, flawed, and trapped by their own ambitions, making the show's tension both riveting and tragic. 
+            The razor-sharp dialogue, the stark contrast between opulence and emotional emptiness, and the show's ability to make the despicable somehow sympathetic create a compelling examination of greed and betrayal.
+            It's an unflinching exploration of what happens when love, loyalty, and morality are twisted by wealth.<br><br>
+            <b>Genre:</b> Drama, Satire, Dark Comedy<br>
+            <b>Starring:</b> Brian Cox, Jeremy Strong, Sarah Snook</p>
+    </div>
+</div>
+  
+
+<div class="video-container">
+    <h3>Trailer of <em>Fleabag!</em></h3>
+    <video controls>
+        <source src="FLEABAG_ Seizoen 1 _ Official trailer _ Lumière Series.mp4" type="video/mov">
+    </video>
+</div>
+
+<div class="button-container">
+    <a href="favorites.html" class="nav-box">Go Top</a>
+</div>
+
+
+</body>
+</html>

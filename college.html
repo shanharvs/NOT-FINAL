@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>COLLEGE</title>
+    <link rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,150;1,150&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background: url("backgrounds/background1.png") no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            font-family: "Roboto", sans-serif;
+            background-color: #cae4ce;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #8fc0a9;
+            padding: 12px 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            gap: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin: 0 10px;
+            padding: 10px 15px;
+            font-weight: bold;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+
+        nav a i {
+            margin-right: 5px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a:hover i {
+            color: #cae4ce;
+        }
+
+        nav a:active, nav a:active i {
+        color: #276967;
+        }
+
+        .biography-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+            position: relative;
+        }
+
+        .biography-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 70px;
+        }
+
+        h1 {
+            font-family: Georgia;
+            font-size: 89px;
+            color: #8FC0A9;
+            text-shadow: 2px 1px 6px black;
+            margin-bottom: 20px;
+            letter-spacing: 8px;
+            position: relative;
+            z-index: 2;
+        }
+
+        h2 {
+        font-family: Georgia;
+        display: inline;
+        font-size: 35px;
+        color: #cae4ce;
+        margin: 20px;
+        text-shadow: 2px 1px 10px black;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-decoration-color: #33443C;
+        text-underline-offset: 12px;
+        }
+
+        .background-text {
+            position: absolute;
+            font-family: Georgia;
+            font-size: 150px;
+            font-weight: bold;
+            color: #276967;
+            opacity: 20%;
+            white-space: nowrap;
+            letter-spacing: 1px;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        .nav-box {
+            display: inline-block;
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin: 10px 30px 20px 0;
+            background-color: #8FC0A9;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .nav-box:hover {
+            background-color: #c8d5b9;
+        }
+
+        .nav-box:active {
+            background-color: #92ab82;
+        }
+
+        .boxtype {
+            width: 90%;
+            margin: 20px auto;
+            padding: 15px;
+            background-color: #8fc0a9;
+            box-shadow: 0 0 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .image_container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            gap: 10px;
+        }
+
+        .image-container {
+            box-sizing: border-box;
+            overflow: hidden;
+            padding: 5px;
+            margin-bottom: 50px;
+            margin-top: 50px;
+            border-radius: 16px; 
+        }
+
+        .image-container img {
+            border-radius: 16px;
+            width: 300px;
+            height: 300px; 
+            object-fit: cover;
+            margin-top: 10px;
+            display: block;
+        }
+
+        .image-container:hover {
+            transform: scale(1.2); 
+       }
+
+        .button-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            width: 90%;
+            margin: 20px auto;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .button-container a {
+            background-color: #cae4ce;
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html"><i class="fa-solid fa-house fa-sm"></i>HOME</a></li>
+            <li><a href="biomain.html"><i class="fa-solid fa-child-dress fa-sm"></i>BIOGRAPHY</a></li>
+            <li><a href="skillsmain.html"><i class="fa-solid fa-heart fa-sm"></i>SKILLS</a></li>
+            <li><a href="resume.html"><i class="fa-solid fa-file fa-sm"></i>RESUME</a></li>
+            <li><a href="gallery.html"><i class="fa-solid fa-image fa-sm"></i> PHOTO GALLERY</a></li>
+            <li><a href="favorites.html"><i class="fa-solid fa-star fa-sm"></i>MEDIA</a></li>
+            <li><a href="goals.html"><i class="fa-solid fa-location-dot fa-sm"></i>GOALS</a></li>
+
+        </ul>
+    </nav>
+
+
+    <div class="biography-section">
+        <div class="background-text">BIOGRAPHY</div>
+        <h1>BIOGRAPHY</h1>
+        <ul>
+            <li><a href="childhood.html" class="nav-box">CHILDHOOD</a></li>
+            <li><a href="teenage.html" class="nav-box">TEENAGE</a></li>
+            <li><a href="college.html" class="nav-box">COLLEGE</a></li>
+        </ul>
+
+        
+    </div>
+
+
+    <div class="image_container">
+        <div class="image-container">
+            <a href="biopics/college1.jpg" target="winImage">
+                <img src="biopics/college1.jpg" alt="College 1">
+            </a>
+        </div>
+        <div class="image-container">
+            <a href="biopics/college2.jpg" target="winImage">
+                <img src="biopics/college2.jpg" alt="College 2">
+            </a>
+        </div>
+        <div class="image-container">
+            <a href="biopics/college3.jpg" target="winImage">
+                <img src="biopics/college3.jpg" alt="College 3">
+            </a>
+        </div>
+        <div class="image-container">
+            <a href="biopics/college4.jpg" target="winImage">
+                <img src="biopics/college4.jpg" alt="College 4">
+            </a>
+        </div>
+    </div>    
+
+
+<div class="boxtype">
+    <h2>College Years</h2>
+             <p style="text-align: justify; line-height: 1.8; font-size: 15px; font-family: Verdana, Geneva, Tahoma, sans-serif; text-indent: 70px; margin: 30px;">Now in her college years, this is the time she doesn’t know what she’s gonna do with her life.<sup>1</sup>
+                She doesn’t know what to do in her future and she can’t see herself doing whatsoever.<sup>2</sup>
+                She’s in the process of finding herself.<sup>3</sup>
+                And honestly, she chose IT as her course because one of her sisters graduated with it and that it’s the most practical option as there are so many jobs that are required in IT because the course itself is broad.<sup>4</sup>
+                She’s currently in her second year in this course in University of the East, and one more semester, she will be in her third year.<sup>5</sup>
+                She’s hopeful that she knows what she’s doing.<sup>6</sup>
+                Even though the course is hard, and cramming is still in her veins, she’s trying to pass everything.<sup>7</sup>
+                Honestly speaking, she’s one of those achievers and loves the praises that came from it.<sup>8</sup>
+                But now, as long as she passed everything, she’s good to go.<sup>9</sup>
+                Every subject sure is hard but in her mind, she could pass through it.<sup>10</sup>
+                Her love for books also grew.<sup>11</sup>
+                Instead of reading wattpad books which were written in <abbr title="Tagalog and English">TagLish</abbr> she’s now reading full English novels written by various authors across the world.<sup>12</sup>
+                It didn’t change the fact that she’s mostly into fiction in romance, fantasy, and historical genres.<sup>13</sup> 
+                But she can read different genres if she likes, it really depends on her mood.<sup>14</sup> 
+                And that she can now buy books, which she is most proud of, with her own money by saving it for weeks.<sup>15</sup>
+                She also made new friends, but mostly boys as this course is more into men's field.<sup>16</sup>
+                As for what happens to her after graduation, she still doesn’t know it yet.<sup>17</sup>
+                But she’s not panicking that much because her sisters are there for her to help her.<sup>18</sup>
+                For her college years and beyond, she thinks, <q>that even though the world is black in white, there are also screaming colors as life goes on no matter what happens, so enjoy it and be proud of it.</q><sup>19</sup>
+                No matter how big or small.<sup>20</sup></p>
+    
+
+
+                <div class="button-container">
+                    <a href="biomain.html" class="nav-box">Go Top</a>
+                </div>
+   
+        </div>
+
+</body>
+</html>

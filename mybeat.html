@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>MY BEAT</title>
+    <link rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,150;1,150&display=swap" rel="stylesheet">
+
+    <style>
+
+        body {
+            background: url("backgrounds/background1.png") no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            font-family: "Roboto", sans-serif;
+            background-color: #cae4ce;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #8fc0a9;
+            padding: 12px 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            gap: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin: 0 10px;
+            padding: 10px 15px;
+            font-weight: bold;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+
+        nav a i {
+            margin-right: 5px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a:hover i {
+            color: #cae4ce;
+        }
+
+        nav a:active, nav a:active i {
+        color: #276967;
+    	}
+
+        .mybeat-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+            position: relative;
+        }
+
+        .mybeat-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 70px;
+        }
+
+        h1 {
+            font-family: Georgia;
+            font-size: 89px;
+            color: #8FC0A9;
+            text-shadow: 2px 1px 6px black;
+            margin-bottom: 20px;
+            letter-spacing: 8px;
+            position: relative;
+            z-index: 2;
+        }
+
+        h2 {
+            font-family: Georgia;
+            font-size: 35px;
+            color:  #cae4ce;
+            margin: 15px 0;
+            text-shadow: 2px 1px 10px black;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-decoration-color: #33443C;
+            text-underline-offset: 12px;
+        }
+
+        .background-text {
+            position: absolute;
+            font-family: Georgia;
+            font-size: 150px;
+            font-weight: bold;
+            color: #276967;
+            opacity: 20%;
+            white-space: nowrap;
+            letter-spacing: 1px;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        .nav-box {
+            display: inline-block;
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin: 10px 30px 20px 0;
+            background-color: #8FC0A9;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .nav-box:hover {
+            background-color: #c8d5b9;
+        }
+
+        .nav-box:active {
+            background-color: #92ab82;
+        }
+
+        .media-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .media-container img {
+            width: 300px;
+            height: 300x;
+            object-fit: cover;
+            margin-left: 50px;
+            border-radius: 10px;
+        }
+
+        .media-container audio {
+            width: 300px; 
+            margin-top: 10px; 
+            outline: none;
+            margin-left: 50px;
+        }
+
+        .song-box {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            background-color: #8FC0A9;
+            padding: 15px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            max-width: 1200px;
+            gap: 20px;
+        }
+
+        .song-description {
+            text-align: left;
+            color: #000000;
+            font-weight: bold;
+            margin-left: 20px;
+            line-height: 1.6;
+            max-width: 900px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px; 
+        }
+
+        .song-description p {
+            font-family: Verdana;
+            font-weight: 1;
+            margin: 1px;
+        }
+
+        .button-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            width: 90%;
+            margin: 20px auto;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .button-container a {
+            background-color: #cae4ce;
+            font-size: 16px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html"><i class="fa-solid fa-house fa-sm"></i>HOME</a></li>
+            <li><a href="biomain.html"><i class="fa-solid fa-child-dress fa-sm"></i>BIOGRAPHY</a></li>
+            <li><a href="skillsmain.html"><i class="fa-solid fa-heart fa-sm"></i>SKILLS</a></li>
+            <li><a href="resume.html"><i class="fa-solid fa-file fa-sm"></i>RESUME</a></li>
+            <li><a href="gallery.html"><i class="fa-solid fa-image fa-sm"></i> PHOTO GALLERY</a></li>
+            <li><a href="favorites.html"><i class="fa-solid fa-star fa-sm"></i>MEDIA</a></li>
+            <li><a href="goals.html"><i class="fa-solid fa-location-dot fa-sm"></i>GOALS</a></li>
+
+        </ul>
+    </nav>
+
+
+    <div class="mybeat-section">
+        <div class="background-text">MEDIA</div>
+        <h1>MEDIA</h1>
+        <ul>
+            <li><a href="mybeat.html" class="nav-box">MY BEAT</a></li>
+            <li><a href="myfilmovies.html" class="nav-box">MY FILM MOVIES</a></li>
+            <li><a href="mytvshows.html" class="nav-box">MY TV SHOWS</a></li>
+        </ul>
+    </div>
+
+    <div class="song-box">
+    <div class="media-container">
+        <img src="moviesfilmsmusic/music1.jpg" alt="Castle - Halsey">
+        <audio controls loop>
+            <source src="Halsey - Castle (The Huntsman_ Winter's War Version) Teaser.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    <div class="song-description">
+        <h2>Halsey</h2>
+        <p>I really love how Halsey effortlessly blends different genres like pop, alternative, and electropop, creating a sound that's distinctly her own. 
+            Her music has this raw, unfiltered quality that makes it feel deeply personal yet widely relatable. 
+            Albums like <i>Badlands</i> and <i>Manic</i> feel like invitations into her mind—intimate glimpses of her struggles, triumphs, and vulnerabilities. 
+            There’s an honesty in her lyrics that makes it easy to connect with her, whether she’s exploring themes of identity, heartbreak, or mental health. 
+            Her advocacy for mental health awareness and LGBTQ+ rights also resonates with me; it’s admirable how she uses her platform for issues that genuinely matter. 
+            It’s not just about the music—Halsey creates a space for people to feel seen and heard. 
+            Every time I listen to her, I feel a genuine connection, like I’m not just hearing a song but a story that was meant to be shared.</p>
+    </div>
+</div>
+
+<div class="song-box">
+    <div class="media-container">
+        <img src="moviesfilmsmusic/music2.jpg" alt="Ready For It - Taylor Swift">
+        <audio controls loop>
+            <source src="Ready For It_ Trailer.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    <div class="song-description">
+        <h2>Taylor Swift</h2>
+        <p>I've always admired Taylor Swift's ability to reinvent herself while remaining true to her core as a storyteller. 
+            She’s journeyed through country, pop, indie-folk, and even alternative sounds, each era bringing a new layer of depth to her artistry. 
+            Her country roots in Fearless and Speak Now captured the innocence of young love, while the synth-pop vibes of 1989 showcased a vibrant, self-assured version of herself. 
+            Then there’s the introspective, indie-folk style of Folklore and Evermore, which felt like a comforting conversation during a time of uncertainty. 
+            Her lyrics have this poetic, almost diary-like quality that can transport me back to moments of heartbreak, growth, and self-reflection. 
+            Beyond her music, I respect how vocal she is about artists' rights and gender equality—using her platform to challenge industry norms. 
+            Taylor's fearlessness in reclaiming her work and advocating for creative ownership shows her strength not just as an artist but as a person. 
+            Her music doesn’t just tell stories; it captures entire eras of emotion.</p>
+    </div>
+</div>
+
+<div class="song-box">
+    <div class="media-container">
+        <img src="moviesfilmsmusic/music3.jpg" alt="Paper Bag - Fiona Apple">
+        <audio controls loop>
+            <source src="Fiona Apple - Paper Bag (Official HD Video).mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    <div class="song-description">
+        <h2>Fiona Apple</h2>
+        <p>Fiona Apple's music holds a depth and complexity that I rarely find elsewhere. 
+            Her blend of alternative, art pop, and baroque pop creates a soundscape that feels both intricate and unrestrained—like organized chaos. 
+            Fetch the Bolt Cutters was more than just an album for me; it felt like a reckoning, a declaration of freedom and defiance. 
+            There's an authenticity to her music that doesn't try to cater to the mainstream but instead challenges listeners to sit with discomfort and confront raw, unfiltered emotion. 
+            Her voice, unconventional and emotive, paired with her haunting piano work, always leaves me feeling both unsettled and understood. 
+            Fiona’s willingness to be unapologetically complex and to embrace imperfection is something I deeply admire. 
+            Her exploration of trauma, anger, and introspection is layered in a way that makes each listen a new experience. 
+            It’s not easy music, but it’s genuine, and that’s what makes it resonate so deeply with me.</p>
+    </div>
+</div>
+
+<div class="song-box">
+    <div class="media-container">
+        <img src="moviesfilmsmusic/music4.jpg" alt="Ultraviolence - Lana Del Rey">
+        <audio controls loop>
+            <source src="Lana Del Rey - Ultraviolence (Teaser).mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    <div class="song-description">
+        <h2>Lana Del Rey</h2>
+        <p>Lana Del Rey's music has this dreamy, cinematic quality that feels timeless yet contemporary—a blend of nostalgia and melancholy. 
+            Her ability to merge indie pop, baroque pop, and dream pop results in songs that are not just melodies but entire atmospheres. 
+            When I listen to Born to Die or Norman F**ing Rockwell!, it feels like being transported into a hazy, vintage film—full of romance, tragedy, and longing. 
+            Her lyrics are poetic yet accessible, often tinged with a bittersweetness that makes you feel like you’re part of the narrative. 
+            There’s a vulnerability in her work that balances the romanticization of love and loss with an awareness of their darker realities. 
+            I admire how she plays with contradictions—beauty and decay, love and loneliness—crafting an aesthetic that’s uniquely hers. 
+            Lana's style is so distinctive and evocative; it’s like she’s built a world that you can only fully understand when you let yourself sink into the sadness and sweetness of her music.</p>
+    </div>
+</div>
+
+        <div class="button-container">
+            <a href="favorites.html" class="nav-box">Go Top</a>
+    </div>
+    </div>
+
+</body>
+</html>

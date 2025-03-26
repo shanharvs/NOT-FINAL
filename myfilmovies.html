@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>MY FILM MOVIES</title>
+    <link rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,150;1,150&display=swap" rel="stylesheet">
+
+    <style>
+
+        body {
+            background: url("../FINAL/backgrounds/background1.png") no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            font-family: "Roboto", sans-serif;
+            background-color: #cae4ce;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #8fc0a9;
+            padding: 12px 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            gap: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin: 0 10px;
+            padding: 10px 15px;
+            font-weight: bold;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+
+        nav a i {
+            margin-right: 5px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a:hover i {
+            color: #cae4ce;
+        }
+
+        nav a:active, nav a:active i {
+        color: #276967;
+    	}
+
+        .myfilm-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+            position: relative;
+        }
+
+        .myfilm-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 70px;
+        }
+
+        h1 {
+            font-family: Georgia;
+            font-size: 89px;
+            color: #8FC0A9;
+            text-shadow: 2px 1px 6px black;
+            margin-bottom: 20px;
+            letter-spacing: 8px;
+            position: relative;
+            z-index: 2;
+        }
+
+        h2 {
+            font-family: Georgia;
+            font-size: 35px;
+            color:  #cae4ce;
+            margin: 15px 0;
+            text-shadow: 2px 1px 10px black;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-decoration-color: #33443C;
+            text-underline-offset: 12px;
+        }
+
+        h3 {
+            font-family: Georgia;
+            font-size: 35px;
+            color: #cae4ce;
+            background-color: #8fc0a9;
+            padding: 12px 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            text-shadow: 2px 1px 10px black;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-decoration-color: #33443C;
+            text-underline-offset: 12px;
+            margin-bottom: 15px;
+        }
+
+        .background-text {
+            position: absolute;
+            font-family: Georgia;
+            font-size: 150px;
+            font-weight: bold;
+            color: #276967;
+            opacity: 20%;
+            white-space: nowrap;
+            letter-spacing: 1px;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        .nav-box {
+            display: inline-block;
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin: 10px 30px 20px 0;
+            background-color: #8FC0A9;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .nav-box:hover {
+            background-color: #c8d5b9;
+        }
+
+        .nav-box:active {
+            background-color: #92ab82;
+        }
+
+        .media-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .media-container:hover {
+            transform: scale(1.2);
+        }
+
+        .media-container img {
+            width: 350px;
+            height: 450px;
+            object-fit: cover;
+            margin-left: 50px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+
+        
+
+        .movie-box {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            background-color: #8FC0A9;
+            padding: 15px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            max-width: 1200px;
+            gap: 20px;
+        }
+
+        .movie-description {
+            text-align: left;
+            color: #000000;
+            font-weight: bold;
+            margin-left: 20px;
+            line-height: 1.6;
+            max-width: 900px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px; 
+        }
+
+        .movie-description p {
+            font-family: Verdana;
+            font-weight: 1;
+            margin: 1px;
+        }
+
+        .video-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            margin-top: 120px;
+            margin-bottom: 20px;
+        }
+
+        video {
+            width: 1200px;        
+            height: 500px;     
+            border-radius: 10px;
+            object-fit: cover;  
+        }
+
+        .button-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            width: 90%;
+            margin: 20px auto;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .button-container a {
+            background-color: #cae4ce;
+            font-size: 16px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html"><i class="fa-solid fa-house fa-sm"></i>HOME</a></li>
+            <li><a href="biomain.html"><i class="fa-solid fa-child-dress fa-sm"></i>BIOGRAPHY</a></li>
+            <li><a href="skillsmain.html"><i class="fa-solid fa-heart fa-sm"></i>SKILLS</a></li>
+            <li><a href="resume.html"><i class="fa-solid fa-file fa-sm"></i>RESUME</a></li>
+            <li><a href="gallery.html"><i class="fa-solid fa-image fa-sm"></i> PHOTO GALLERY</a></li>
+            <li><a href="favorites.html"><i class="fa-solid fa-star fa-sm"></i>MEDIA</a></li>
+            <li><a href="goals.html"><i class="fa-solid fa-location-dot fa-sm"></i>GOALS</a></li>
+
+        </ul>
+    </nav>
+
+
+    <div class="myfilm-section">
+        <div class="background-text">MEDIA</div>
+        <h1>MEDIA</h1>
+        <ul>
+            <li><a href="mybeat.html" class="nav-box">MY BEAT</a></li>
+            <li><a href="myfilmovies.html" class="nav-box">MY FILM MOVIES</a></li>
+            <li><a href="mytvshows.html" class="nav-box">MY TV SHOWS</a></li>
+        </ul>
+    </div>
+
+    <div class="movie-box">
+    <div class="media-container">
+        <img src="../FINAL/moviesfilmsmusic/movie1.jpg" alt="Spirited Away" title="Spirited Away">
+    </div>
+    <div class="movie-description">
+        <h2>Spirited Away (2001)</h2>
+        <p>Directed by Hayao Miyazaki, Spirited Away is an enchanting fantasy film that tells the story of Chihiro, a 10-year-old girl who stumbles into a magical and mysterious spirit world while moving to a new town.
+        As her parents are transformed into pigs, Chihiro is forced to navigate this bizarre realm, working in a bathhouse run by the cunning witch Yubaba. 
+        I love how this film combines whimsical fantasy with darker, unsettling elements, creating a dreamlike experience that mirrors the uncertainty of adolescence. 
+        The animation is breathtaking, capturing intricate details of Japanese folklore while also expressing universal themes of identity, resilience, and the fear of change. 
+        The film's ability to convey deep emotions without overly explaining them resonates with me, making each viewing feel like a rediscovery.
+        Miyazaki's storytelling balances the magical and the melancholic, reminding me of the power of courage and kindness, even in the most surreal circumstances.<br><br>
+        <b>Genre:</b> Fantasy, Adventure, Animation<br>
+        <b>Starring:</b> Rumi Hiiragi, Miyu Irino, Mari Natsuki</p>
+    </div>
+</div>
+
+<div class="movie-box">
+    <div class="media-container">
+        <img src="../FINAL/moviesfilmsmusic/movie2.jpg" alt="Ready For It - Taylor Swift">
+    </div>
+
+    <div class="movie-description">
+        <h2>Gone Girl (2014)</h2>
+        <p>Directed by David Fincher and based on Gillian Flynn's novel, Gone Girl explores the unraveling of Nick and Amy Dunne's seemingly perfect marriage.
+            When Amy mysteriously disappears on their fifth wedding anniversary, the media frenzy and public speculation quickly paint Nick as a villain.
+            What I find gripping about this psychological thriller is its exploration of manipulation, identity, and the facades we present to the world.
+            The film's nonlinear storytelling, combined with Fincher's meticulous direction, builds an atmosphere of suspicion that keeps me questioning every character's intentions.
+            Rosamund Pike’s portrayal of Amy is both chilling and captivating, embodying the complexity of a character whose motivations are both understandable and terrifying.
+            The commentary on media sensationalism and the obsession with creating a "perfect image" adds a layer of depth, making me reflect on how perception often outweighs the truth.
+            The genre's ability to blur the lines between victim and villain is something I find endlessly intriguing.<br><br>
+            <b>Genre:</b> Thriller, Mystery, Drama<br>
+            <b>Starring:</b> Ben Affleck, Rosamund Pike, Neil Patrick Harris</p>
+    </div>
+</div>
+
+<div class="movie-box">
+    <div class="media-container">
+        <img src="../FINAL/moviesfilmsmusic/movie3.jpg" alt="Paper Bag - Fiona Apple">
+    </div>
+    <div class="movie-description">
+        <h2>Nosferatu (2024)</h2>
+        <p>Directed by Robert Eggers, Nosferatu reimagines the classic 1922 silent horror film, breathing new life into the chilling legend of Count Orlok. 
+            The film follows Thomas Hutter's journey to the castle of Orlok, a vampire whose grotesque appearance and sorrowful longing for connection blur the lines between predator and victim. 
+            What I admire about this retelling is its dedication to gothic horror, emphasizing atmosphere and psychological terror over cheap scares. 
+            Eggers’ attention to historical detail, combined with Bill Skarsgård’s haunting portrayal of Orlok, makes the film a beautiful yet unsettling meditation on obsession and isolation. 
+            The shadowy, expressionist cinematography pays homage to the original while adding a modern, immersive depth. This film masterfully intertwines horror with tragedy, exploring the human fear of mortality and the unknown.<br><br>
+            <b>Genre:</b> Horror, Gothic, Drama<br>
+            <b>Starring:</b> Bill Skarsgård, Lily-Rose Depp, Nicholas Hoult</p>
+    </div>
+</div>
+
+<div class="movie-box">
+    <div class="media-container">
+        <img src="../FINAL/moviesfilmsmusic/movie4.jpg" alt="Ultraviolence - Lana Del Rey">
+    </div>
+    <div class="movie-description">
+        <h2>Oppenheimer</h2>
+        <p>Directed by Christopher Nolan, Oppenheimer is a gripping exploration of the life of J. Robert Oppenheimer, the physicist known as the “father of the atomic bomb.”
+            The film intricately balances Oppenheimer's brilliance and internal conflict as he grapples with the moral implications of his creation.
+            What strikes me most about this film is its nuanced portrayal of ambition, guilt, and the irreversible impact of scientific discovery. Nolan's non-linear storytelling reflects the fragmented psyche of a man who revolutionized warfare while dooming himself to infamy. 
+            Cillian Murphy's portrayal is both haunting and vulnerable, capturing the complexity of a mind burdened by the weight of history. 
+            It’s not just a historical drama—it’s a profound reflection on the consequences of knowledge and power.<br><br>
+            <b>Genre:</b> Biographical, Historical, Drama<br>
+            <b>Starring:</b> Cillian Murphy, Emily Blunt, Robert Downey Jr.</p>
+    </div>
+</div>
+
+<div class="video-container">
+    <h3>Movie Trailer of <em>Nosferatu!</em></h3>
+    <video controls>
+        <source src="NOSFERATU - Official Teaser Trailer [HD] - Only In Theaters December 25.mp4" type="video/mp4">
+    </video>
+</div>
+
+<div class="button-container">
+    <a href="favorites.html" class="nav-box">Go Top</a>
+</div>
+
+</body>
+</html>

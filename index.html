@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>MAIN PAGE</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,150;1,150&display=swap" rel="stylesheet">
+    
+
+    <style>
+
+        nav {
+            display: flex;
+            font-family: "Roboto", sans-serif;
+            justify-content: center;
+            align-items: center;
+            background-color: #8fc0a9;
+            padding: 12px 20px;
+            width: 100%;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin: 0 10px;
+            padding: 10px 15px;
+            font-weight: bold;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+
+        nav a i {
+            margin-right: 5px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a:hover i {
+            color: #cae4ce;
+        }
+
+        nav a:active, nav a:active i {
+        color: #276967;
+    }
+
+
+        .main-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 180px;
+        }
+
+
+        .container {
+            display: flex;
+            position: relative;
+            gap: 20px;
+            max-width: 1100px;
+            width: 100%;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+
+        .video-container {
+            flex: 1;
+            position: relative;
+            top: 60px; 
+            left: -30px; 
+        }
+
+        .video-container video {
+            width: 100%; 
+            max-width: 2000px; 
+            height: 300px; 
+            object-fit: cover; 
+        }
+        .text-container {
+            flex: 1;
+            position: relative;
+            top: -20px;
+            left: 30px;
+        }
+
+
+        .text-container p {
+            display: inline-block;
+            background-color: #8fc0a9;
+            font-family: Verdana;
+            font-size: 15px;
+            line-height: 25px;
+            padding: 15px 20px;
+            border-radius: 10px;
+            max-width: 100%;
+            display: block;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            text-align: justify;
+        }
+
+        .background-text {
+            position: absolute;
+            font-family: Georgia;
+            font-size: 180px;
+            font-weight: bold;
+            color: #276967;
+            opacity: 20%;
+            white-space: nowrap;
+            letter-spacing: 1px;
+            z-index: -1;
+            }
+
+        .about {
+            top: 14%;
+            left: 62%;
+        }
+
+        .shanza {
+            bottom: 1%;
+            right: 45%;
+        }
+
+        .social-icons {
+            position: absolute;
+            top: 170px;  
+            left: 230px;
+            font-size: 18px;
+            gap: 200px;
+            text-decoration: none;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            margin-right: 10px;
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="biomain.html"><i class="fa-solid fa-child-dress fa-sm"></i>BIOGRAPHY</a></li>
+            <li><a href="skillsmain.html"><i class="fa-solid fa-heart fa-sm"></i>SKILLS</a></li>
+            <li><a href="resume.html"><i class="fa-solid fa-file fa-sm"></i>RESUME</a></li>
+            <li><a href="gallery.html"><i class="fa-solid fa-image fa-sm"></i> PHOTO GALLERY</a></li>
+            <li><a href="favorites.html"><i class="fa-solid fa-star fa-sm"></i>MEDIA</a></li>
+            <li><a href="goals.html"><i class="fa-solid fa-location-dot fa-sm"></i>GOALS</a></li>
+
+        </ul>
+    </nav>
+
+
+    <div class="background-text about">About</div>
+    <div class="background-text shanza">Shanizza</div>
+
+    <div class="social-icons">
+        <a href="https://www.facebook.com/shanizzaharvey" target="_blank">
+            <i class="fa-brands fa-square-facebook fa-2xl" style="color: #8fc0a9;"></i>
+        </a>
+        <a href="https://www.instagram.com/shaherself" target="_blank">
+            <i class="fa-brands fa-square-instagram fa-2xl" style="color: #8fc0a9;"></i>
+        </a>
+        <a href="https://twitter.com/conradneomi" target="_blank">
+            <i class="fa-brands fa-square-x-twitter fa-2xl" style="color: #8fc0a9;"></i>
+        </a>
+        <a href="https://www.tumblr.com/complexityofus" target="_blank">
+            <i class="fa-brands fa-square-tumblr fa-2xl" style="color: #8fc0a9"></i>
+        </a>
+    </div>
+    
+
+    <div class="main-content">
+        <div class="container">
+
+            <div class="video-container">
+                <video width="500" controls>
+                    <source src="mandyfinal.mov" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="text-container">
+                <p>
+                    What brings you here? Anyway, welcome to my webpage! Feel free to scroll through and get to know more about me—my story, my interests, and everything in between. I truly hope you enjoy exploring this little space of mine! This page is a reflection of who I am, my journey, and the things that inspire me. Whether you stumbled upon this by chance or came here intentionally, I appreciate your time.
+
+                    Life is a beautiful collection of moments, dreams, and experiences, and this space is my way of sharing a glimpse of mine with you. So, take a look around, stay as long as you like, and maybe you'll find something that resonates with you. Who knows? Perhaps our paths have crossed for a reason. I hope you leave here with a little more warmth, a little more inspiration, and a sense of connection.
+                    
+                    To the stars who listened and the dreams that are answered! <3</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
